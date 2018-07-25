@@ -7,7 +7,8 @@ export default class Header extends Component {
         return (
             <header>
                 <nav className="navbar navbar-expand-lg navbar-light">
-                    <a className="navbar-brand" href="#">John Doe</a>
+                    <a className="navbar-brand icon" href="#"><span className="i-circle">ER</span></a>
+                    <a className="navbar-brand title" href="#">Erik Rybalkin</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -16,13 +17,13 @@ export default class Header extends Component {
 
                         <ul className="navbar-nav ml-md-auto">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">How it works <span className="sr-only">(current)</span></a>
+                                <Link className="nav-link active" to="/">How it works <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Calendar <span className="sr-only">(current)</span></a>
+                                <Link className="nav-link" to="/calendar">Calendar <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact us</a>
+                                <Link className="nav-link" to="/contact">Contact us</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Portfolio</a>

@@ -10,4 +10,12 @@
   height: 50px;
   line-height: 50px;
   background-image: linear-gradient(to right, #203d61, #1a355e, #162c5b, #162456, #181a51);
+  .muted-nav {
+    padding: 0 20px 0 10px;
+    float: right;
+    @media screen and (max-width: 780px){
+      display: none;
+
+    }
+  }
 }

@@ -3,12 +3,41 @@
 @import "globalMixins";
 @import "globalFunctions";
 
+@mixin hover {
+  @include transition;
+  &:hover {
+    @include transition;
+    color: $active !important;
+  }
+}
+
 header {
+
   nav {
     background: $navigation;
-    ul{
-      padding: 0 10em 0 0;
-      li{
+    .i-circle {
+      background: #2161b7;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 15px;
+      padding: 0.4em;
+    }
+    .active {
+      color: $active !important;
+    }
+    a.title {
+      padding: 0;
+      font-size: fluidFont(10px);
+      position: relative;
+      top: 2px;
+      @include hover;
+    }
+    a.icon {
+      padding: 0 0 0 115px;
+    }
+    ul {
+      padding: 0 7.8em 0 0;
+      li {
         padding: 0 0 0 0.8em;
       }
     }
@@ -16,10 +45,10 @@ header {
       color: white !important;
       padding: 0 0 0 14%;
       font: {
-       weight: 300;
+        weight: 300;
         size: fluidFont(8.7px);
       }
+      @include hover;
     }
   }
 }
-

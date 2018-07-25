@@ -1,14 +1,49 @@
 header nav {
   background: #213b82; }
+  header nav .i-circle {
+    background: #2161b7;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 0.4em; }
+  header nav .active {
+    color: #a4afbf !important; }
+  header nav a.title {
+    padding: 0;
+    font-size: 1em;
+    position: relative;
+    top: 2px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; }
+    header nav a.title:hover {
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+      color: #a4afbf !important; }
+  header nav a.icon {
+    padding: 0 0 0 115px; }
   header nav ul {
-    padding: 0 10em 0 0; }
+    padding: 0 7.8em 0 0; }
     header nav ul li {
       padding: 0 0 0 0.8em; }
   header nav a {
     color: white !important;
     padding: 0 0 0 14%;
     font-weight: 300;
-    font-size: 0.87em; }
+    font-size: 0.87em;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; }
+    header nav a:hover {
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+      color: #a4afbf !important; }
 
 .footer {
   position: absolute;
@@ -17,6 +52,12 @@ header nav {
   height: 50px;
   line-height: 50px;
   background-image: linear-gradient(to right, #203d61, #1a355e, #162c5b, #162456, #181a51); }
+  .footer .muted-nav {
+    padding: 0 20px 0 10px;
+    float: right; }
+    @media screen and (max-width: 780px) {
+      .footer .muted-nav {
+        display: none; } }
 
 html {
   font-size: 16px; }
