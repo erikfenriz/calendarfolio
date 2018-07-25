@@ -1,0 +1,25 @@
+@import "palette";
+@import "layout";
+@import "globalMixins";
+@import "globalFunctions";
+
+header {
+  nav {
+    background: $navigation;
+    ul{
+      padding: 0 10em 0 0;
+      li{
+        padding: 0 0 0 0.8em;
+      }
+    }
+    a {
+      color: white !important;
+      padding: 0 0 0 14%;
+      font: {
+       weight: 300;
+        size: fluidFont(8.7px);
+      }
+    }
+  }
+}
+

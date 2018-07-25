@@ -4,8 +4,9 @@ import registerServiceWorker from './registerServiceWorker';
 import {
     BrowserRouter
 } from 'react-router-dom';
-import Router from './components/Router';
 import './css/styles.css';
+import Router from './components/Router';
+
 
 
 ReactDOM.render(
