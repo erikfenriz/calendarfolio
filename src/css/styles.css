@@ -45,20 +45,6 @@ header nav {
       transition: all 500ms ease;
       color: #a4afbf !important; }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background-image: linear-gradient(to right, #203d61, #1a355e, #162c5b, #162456, #181a51); }
-  .footer .muted-nav {
-    padding: 0 20px 0 10px;
-    float: right; }
-    @media screen and (max-width: 780px) {
-      .footer .muted-nav {
-        display: none; } }
-
 html {
   font-size: 16px; }
 
