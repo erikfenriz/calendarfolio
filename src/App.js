@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Runners from "./components/Runners";
+
 
 class App extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <Header/>
-                <Footer/>
-            </React.Fragment>
+                <Runners/>
         );
     }
 }
