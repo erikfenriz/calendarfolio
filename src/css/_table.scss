@@ -1,0 +1,53 @@
+@import "palette";
+@import "layout";
+@import "globalMixins";
+@import "globalFunctions";
+
+table {
+  width: 36%;
+  height: 90%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    size: fluidFont(16px);
+  }
+  border-collapse: collapse;
+  td, th {
+    border: 1px solid #ddd;
+    padding: 2%;
+  }
+  tbody tr td {
+    @media screen and (max-width: 700px) {
+      height: 1.979166px;
+      padding: 0;
+    }
+    @media screen and (max-height: 700px) {
+      font-size: fluidFont(8px);
+    }
+    @media screen and (max-height: 680px) {
+      font-size: fluidFont(7px);
+    }
+    @media screen and (max-height: 420px) {
+      font-size: fluidFont(5px);
+    }
+    @media screen and (max-height: 300px) {
+      font-size: fluidFont(4px);
+    }
+  }
+  th {
+    text-align: left;
+    background-color: #c23426;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #cdcdcd;
+  }
+  tr:nth-child(odd) {
+    background-color: #aeaeae;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+}

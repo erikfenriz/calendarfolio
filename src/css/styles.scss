@@ -1,8 +1,9 @@
 @import "layout";
 @import "palette";
 @import "header";
-@import "footer";
+@import "table";
 @import "notFound";
+@import "button";
 
 html {
   font-size: 16px;
@@ -12,6 +13,6 @@ html {
   font-family: Helvetica, Arial, Geneva, sans-serif;
 }
 
-#root{
+#root {
   background-color: #3a352d;
 }

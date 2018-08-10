@@ -1,0 +1,26 @@
+@import "palette";
+@import "layout";
+@import "globalMixins";
+@import "globalFunctions";
+
+.button {
+  float: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 36%;
+  height: 10%;
+  background-color: green;
+  color: #eeeeee;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    size: fluidFont(20px);
+  }
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    background-color: lighten(green, 3%);
+    color: white;
+  }
+}
