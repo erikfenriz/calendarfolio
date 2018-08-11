@@ -176,10 +176,62 @@ export default class Runners extends Component {
             if (place[7].innerHTML === 'undefined crossed the line in undefined ms' || place[7].innerHTML === '' || place[7].innerHTML === undefined) {
                 place[7].innerHTML = runner[7] + " crossed the line in " + time[7] + " ms";
             }
-            console.log(time);
         }
 
-        // this.setState({runner, time});
+        if (runner.length === 8) {
+            $.post('http://localhost:3000/runners/', {
+                "1st": runner[0],
+                '1st-time': time[0],
+                "2nd": runner[1],
+                '2nd-time': time[1],
+                "3rd": runner[2],
+                '3rd-time': time[2],
+                "4th": runner[3],
+                '4th-time': time[3],
+                "5th": runner[4],
+                '5th-time': time[4],
+                "6th": runner[5],
+                '6th-time': time[5],
+                "7th": runner[6],
+                '7th-time': time[6],
+                "8th": runner[7],
+                '8th-time': time[7]
+            }, function (data, status) {
+                console.log(data, status);
+            });
+        } else {
+            setTimeout(function () {
+                $.post('http://localhost:3000/runners/', {
+                    "1st": runner[0],
+                    '1st-time': time[0],
+                    "2nd": runner[1],
+                    '2nd-time': time[1],
+                    "3rd": runner[2],
+                    '3rd-time': time[2],
+                    "4th": runner[3],
+                    '4th-time': time[3],
+                    "5th": runner[4],
+                    '5th-time': time[4],
+                    "6th": runner[5],
+                    '6th-time': time[5],
+                    "7th": runner[6],
+                    '7th-time': time[6],
+                    "8th": runner[7],
+                    '8th-time': time[7]
+                }, function (data, status) {
+                    console.log(data, status);
+                });
+            }, 5000);
+
+
+        }
+
+        // serverPost(runner, time);
+        //
+        // // this.setState({runner, time});
+        // function serverPost(runner, time) {
+        //
+        // }
     };
 
     render() {
