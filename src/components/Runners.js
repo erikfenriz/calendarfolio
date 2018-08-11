@@ -221,7 +221,7 @@ export default class Runners extends Component {
                 }, function (data, status) {
                     console.log(data, status);
                 });
-            }, 5000);
+            }, 2000);
 
 
         }
