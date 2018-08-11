@@ -7,7 +7,7 @@ import carpet from '../img/runner5.png';
 import pacman from '../img/runner6.png';
 import kabal from '../img/runner7.png';
 import olympics from '../img/runner8.png';
-import Table from "./Table";
+// import Table from "./Table";
 import Controls from "./Controls";
 
 import $ from 'jquery';
@@ -31,7 +31,16 @@ export default class Runners extends Component {
 
     makeThemRun = e => {
         // variable setup
-        const timer = 1000;
+        e.stopPropagation();
+        const timer = 1500;
+        let runner = [];
+        let time = [];
+        let place = $('.place');
+        // reset
+        for (let i = 0; i <= 7; i++) {
+            place[i].innerHTML = '';
+        }
+        $('.track__runner').css('left', '0');
 
         let workerWidth,
             marioWidth,
@@ -83,61 +92,92 @@ export default class Runners extends Component {
         const timer7 = Math.floor((Math.random() * timer) + 1);
         const timer8 = Math.floor((Math.random() * timer) + 1);
 
-        let runner = [];
-        let time = [];
-        let place = $('.place');
-        console.log(place);
+
         $('#worker').animate({
             left: workerTrack
         }, timer1, function () {
             runner.push('Worker');
             time.push(timer1);
-            place.text(runner[0]);
+            placement(place, runner, time);
         });
         $('#mario').animate({
             left: marioTrack
         }, timer2, function () {
             runner.push('Mario');
             time.push(timer2);
-            place.text(runner[1]);
+            placement(place, runner, time);
         });
         $('#sonic').animate({
             left: sonicTrack
         }, timer3, function () {
             runner.push('Sonic the Hedgehog');
             time.push(timer3);
-            place.text(runner[3]);
+            placement(place, runner, time);
         });
         $('#flash').animate({
             left: flashTrack
         }, timer4, function () {
             runner.push('Flash');
             time.push(timer4);
+            placement(place, runner, time);
         });
         $('#carpet').animate({
             left: carpetTrack
         }, timer5, function () {
             runner.push('Magic Carpet');
             time.push(timer5);
+            placement(place, runner, time);
         });
         $('#pacman').animate({
             left: pacmanTrack
         }, timer6, function () {
             runner.push('PacMan');
             time.push(timer6);
+            placement(place, runner, time);
         });
         $('#kabal').animate({
             left: kabalTrack
         }, timer7, function () {
             runner.push('Kabal');
             time.push(timer7);
+            placement(place, runner, time);
         });
         $('#olympics').animate({
             left: olympicsTrack
         }, timer8, function () {
             runner.push('Usain Bolt');
             time.push(timer8);
+            placement(place, runner, time);
         });
+
+        function placement(place, runner, time) {
+
+            if (place[0].innerHTML === 'undefined crossed the line in undefined ms' || place[0].innerHTML === '' || place[0].innerHTML === undefined) {
+                place[0].innerHTML = runner[0] + " crossed the line in " + time[0] + " ms";
+            }
+            if (place[1].innerHTML === 'undefined crossed the line in undefined ms' || place[1].innerHTML === '' || place[1].innerHTML === undefined) {
+                place[1].innerHTML = runner[1] + " crossed the line in " + time[1] + " ms";
+            }
+            if (place[2].innerHTML === 'undefined crossed the line in undefined ms' || place[2].innerHTML === '' || place[2].innerHTML === undefined) {
+                place[2].innerHTML = runner[2] + " crossed the line in " + time[2] + " ms";
+            }
+            if (place[3].innerHTML === 'undefined crossed the line in undefined ms' || place[3].innerHTML === '' || place[3].innerHTML === undefined) {
+                place[3].innerHTML = runner[3] + " crossed the line in " + time[3] + " ms";
+            }
+            if (place[4].innerHTML === 'undefined crossed the line in undefined ms' || place[4].innerHTML === '' || place[4].innerHTML === undefined) {
+                place[4].innerHTML = runner[4] + " crossed the line in " + time[4] + " ms";
+            }
+            if (place[5].innerHTML === 'undefined crossed the line in undefined ms' || place[5].innerHTML === '' || place[5].innerHTML === undefined) {
+                place[5].innerHTML = runner[5] + " crossed the line in " + time[5] + " ms";
+            }
+            if (place[6].innerHTML === 'undefined crossed the line in undefined ms' || place[6].innerHTML === '' || place[6].innerHTML === undefined) {
+                place[6].innerHTML = runner[6] + " crossed the line in " + time[6] + " ms";
+            }
+            if (place[7].innerHTML === 'undefined crossed the line in undefined ms' || place[7].innerHTML === '' || place[7].innerHTML === undefined) {
+                place[7].innerHTML = runner[7] + " crossed the line in " + time[7] + " ms";
+            }
+            console.log(time);
+        }
 
         // this.setState({runner, time});
     };
@@ -169,7 +209,7 @@ export default class Runners extends Component {
                     </tr>
                     <tr>
                         <td>1st</td>
-                        <td id="asd" className="place"></td>
+                        <td className="place"></td>
                     </tr>
                     <tr>
                         <td>2nd</td>
